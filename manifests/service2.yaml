@@ -1,0 +1,7 @@
+application_id: lems-admin-api
+version: 1.7.2
+regions:  
+  - eastus
+  - westus
+time_diff_regions_deployment: 20m
+deployment_time: 2024-06-04T16:00:00.000Z

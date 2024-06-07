@@ -3,5 +3,5 @@ version: 1.7.2
 regions:  
   - eastus
   - westus
-time_diff_regions_deployment: 120
+time_diff_regions_deployment: 110
 deployment_time: 2024-06-04T16:00:00.000Z

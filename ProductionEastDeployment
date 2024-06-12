@@ -16,10 +16,10 @@ node {
     ])
 
         stage('Listing Parameters') {
-            steps {
+            
                 echo "Environment: ${params.environment}"
                 echo "Application ID: ${params.application_id}"
                 echo "Version: ${params.version}"
-            }
+            
         }
 }

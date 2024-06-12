@@ -43,7 +43,7 @@
 node {
     properties([
         pipelineTriggers([
-            genericTrigger(
+            [$class: 'GenericTrigger', 
                 genericVariables: [
                     [key: 'IF_MERGED', value: '$.pull_request.merged'],
                     [key: 'BRANCH', value: '$.pull_request.base.ref'],
@@ -56,7 +56,7 @@ node {
                 silentResponse: false,
                 regexpFilterText: '$IF_MERGED$BRANCH',
                 regexpFilterExpression: 'truemain'
-            )
+            ]
         ])
     ])
 

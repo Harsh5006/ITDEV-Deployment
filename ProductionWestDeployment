@@ -1,1 +1,26 @@
 
+node {
+    properties([
+        pipelineTriggers([
+            [$class: 'GenericTrigger', 
+                genericVariables: [
+                    [key: 'environment', value: '$.parameter.environment'],
+                    [key: 'application_id', value: '$.parameter.application_id'],
+                    [key: 'version', value: '$.parameter.version']
+                ],
+                causeString: 'Triggered by Webhook with Parameters',
+                token: 'jsdue4v834b',
+                printContributedVariables: true,
+                printPostContent: true
+            ]
+        ])
+    ])
+
+        stage('Listing Parameters') {
+            
+                echo "Environment: ${params.environment}"
+                echo "Application ID: ${params.application_id}"
+                echo "Version: ${params.version}"
+            
+        }
+}

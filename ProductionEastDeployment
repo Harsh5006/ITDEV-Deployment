@@ -15,7 +15,6 @@ node {
         ])
     ])
 
-    stages {
         stage('Listing Parameters') {
             steps {
                 echo "Environment: ${params.environment}"
@@ -23,5 +22,4 @@ node {
                 echo "Version: ${params.version}"
             }
         }
-    }
 }
